@@ -2,7 +2,7 @@
 
 # Introduction to GitLab Flow
 
-![GitLab%20Flow%20479ddbf185554437b9158d64c882b661/Untitled.png](GitLab%20Flow%20479ddbf185554437b9158d64c882b661/Untitled.png)
+![GitLabFlow/Untitled.png](GitLabFlow/Untitled.png)
 
 깃은 넓고 다양한 종류의 브런치 전략과 워크플로우를 가능하게 합니다.
 
@@ -22,13 +22,13 @@ GitLab Flow방식을 통해  기능 주도 개발방법과 feature branche를 �
 
 *다른 버전 관리툴을 사용 하다가 Git을 도입하는 경우에  생산적인 워크 플로우를 개발하기 어렵기 떄문에 워크 플로우와 이슈트래킹을 통합하는 GitLab Flow에 대해서 설명하고자 합니다.
 
-![GitLab%20Flow%20479ddbf185554437b9158d64c882b661/Untitled%201.png](GitLab%20Flow%20479ddbf185554437b9158d64c882b661/Untitled%201.png)
+![GitLabFlow/Untitled%201.png](GitLabFlow/Untitled%201.png)
 
 Git으로 변환 할 때 동료와 커밋을 공유하려면 세 단계가 필요하다는 사실에 익숙해 져야합니다. 대부분의 버전 제어 시스템에는 작업 복사본에서 공유 서버로 커밋하는 한 단계 만 있습니다. Git에서는 작업 복사본의 파일을 스테이징 영역에 추가합니다. 그런 다음 로컬 저장소에 커밋합니다. 세 번째 단계는 공유 원격 저장소로 푸시하는 것입니다. 이 세 단계에 익숙해지면 다음 과제는 분기 모델입니다.
 
 *다른 버전 관리툴들은 commit을 통해서만 변경내용이 서버에 적용되지만 깃에서는 스테이징 추가, 로컬 저장소에 커밋, 원격 저장소에 푸쉬되는 3가지 과정이 필요합니다.
 
-![GitLab%20Flow%20479ddbf185554437b9158d64c882b661/Untitled%202.png](GitLab%20Flow%20479ddbf185554437b9158d64c882b661/Untitled%202.png)
+![GitLabFlow/Untitled%202.png](GitLabFlow/Untitled%202.png)
 
 Git을 처음 접하는 많은 조직에는 작업 방법에 대한 규칙이 없기 때문에 저장소가 금방 지저분해질 수 있습니다. 가장 큰 문제는 모두 변경 사항의 일부를 포함하는 장기 실행 분기가 많이 등장한다는 것입니다. 사람들은 어떤 브랜치에 최신 코드가 있는지 또는 어떤 브랜치를 프로덕션에 배포할지 파악하기가 어렵습니다. 종종이 문제에 대한 반응은 [Git flow](https://nvie.com/posts/a-successful-git-branching-model/) 및 [GitHub flow](http://scottchacon.com/2011/08/31/github-flow.html) 와 같은 표준화 된 패턴을 채택하는 것입니다 . 우리는 여전히 개선의 여지가 있다고 생각합니다. 이 문서에서는 GitLab 흐름이라고하는 일련의 사례를 설명합니다.
 
@@ -40,7 +40,7 @@ Git을 처음 접하는 많은 조직에는 작업 방법에 대한 규칙이 �
 
 # Git flow and its problems
 
-![GitLab%20Flow%20479ddbf185554437b9158d64c882b661/Untitled%203.png](GitLab%20Flow%20479ddbf185554437b9158d64c882b661/Untitled%203.png)
+![GitLabFlow/Untitled%203.png](GitLabFlow/Untitled%203.png)
 
 Git 흐름은 Git 브랜치를 사용하기위한 최초의 제안 중 하나였으며 많은 관심을 받았습니다. 기능, 릴리스 및 핫픽스에 대한 지원 분기뿐만 아니라 `master`분기 및 별도 `develop`분기를 제안합니다 . 개발은 `develop`브랜치에서 발생 하고 릴리스 브랜치로 이동 한 후 최종적으로 `master`브랜치에 병합됩니다 .
 
